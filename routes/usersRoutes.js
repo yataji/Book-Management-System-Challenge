@@ -6,9 +6,16 @@ const {
   addUser,
   updateUser,
   deleteUser,
+  connectProfile,
 } = require("../controllers/usersController");
 
+const qwerty = (req, res, next) => {
+  console.log("next");
+  next();
+};
+
 routes.get("/", getAllUser);
+routes.post("/profile", qwerty, connectProfile);
 routes.get("/:id", getUserById);
 
 routes.post("/", addUser);

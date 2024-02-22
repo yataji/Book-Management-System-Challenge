@@ -1,22 +1,65 @@
 {
   "users": [
     {
-      "id": "addc",
+      "id": "adfa",
       "username": "yataji",
       "email": "yassinoubil3@gmail.com",
-      "password": "123456qwerty"
+      "password": "$2b$10$pLqcFTTqW40lbNrLb6DWKuoOYwLlh7GEOPHcx83nIVgpUqWwWU/pO",
+      "userId": "f464b977-ab9b-4650-af1c-397d4e1201cc"
     },
     {
-      "id": "381c",
-      "username": "blackdreams",
+      "id": "88cc",
+      "username": "yassine taji",
       "email": "yassinetaji@num19.com",
-      "password": "12345qwer"
+      "password": "$2b$10$1YjenCl5fF4GaHl3CZKgWehc5TQyfP5CcdcGWsk6SUs5o/5qXg.Ri",
+      "userId": "32b1d450-0eca-4358-bfc6-d1cb6a666a7c"
     },
     {
-      "username": "jiqarbac",
-      "email": "jihane@gmail.com",
-      "password": "1234jihane"
+      "id": "28ba",
+      "username": "hamid",
+      "email": "hamid@gmail.com",
+      "password": "$2b$10$GGB9/dJ1F9XI3sIBfjv.6.Spd4Eaiu6WWaEYNbMr8c7c13uETrAQG",
+      "userId": "186ad9c4-baa2-463b-97e7-a04f42baed48"
+    },
+    {
+      "id": "0245",
+      "username": "abdo",
+      "email": "abdo@gmail.com",
+      "password": "$2b$10$bSyvmg9hn0yB3hvmiep0TutqRFHqfVKZfc/TfLvmumg33fUIrZ1ii",
+      "userId": "2bcd3c76-345e-4a4c-8389-7c22312400f7"
+    },
+    {
+      "id": "6f13",
+      "username": "qwerty",
+      "email": "qwerty@gmail.com",
+      "password": "$2b$10$aGBPCJlyl5jcWF5QwP83pOmvlELyIaX0M2klA8BuNlShULjfQVjY2",
+      "authorId": "36d33b87-ba2d-44cc-bc10-b5fd491d509b"
     }
   ],
-  "books": []
+  "books": [
+    {
+      "id": "4ed7",
+      "title": "book 1",
+      "genre": "action",
+      "content": "yassine kill hamid"
+    },
+    {
+      "id": "0d2e",
+      "title": "maison",
+      "genre": "adventure",
+      "content": "une grande maison qwertyuioplkjhgfdsazxcvbnm"
+    },
+    {
+      "id": "a347",
+      "title": "pc",
+      "genre": "gamer",
+      "content": "pc gamer asus dell macbook"
+    },
+    {
+      "id": "6370",
+      "title": "abdo",
+      "genre": "animal",
+      "content": "abdo mange hamid dans la cuisine"
+    }
+  ]
 }

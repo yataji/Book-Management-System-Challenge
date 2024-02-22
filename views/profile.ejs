@@ -70,7 +70,7 @@
   <body>
     <div class="profile-container">
       <div class="profile-header">
-        <h1><%= user.data.username %></h1>
+        <h1><%= userFound.username %></h1>
       </div>
       <div class="profile-content">
         <h2>About Me</h2>
@@ -80,10 +80,11 @@
           skills.
         </p>
         <h2>Contact Information</h2>
-        <p>Email: john.doe@example.com</p>
+        <p>Email: <%= userFound.email %></p>
         <p>Website: www.johndoe.com</p>
       </div>
-      <button type="submit">All Books</button>
+      <button><a href="/books/all">All Books</a></button>
+      <button><a href="/books/add">Add Books</a></button>
     </div>
   </body>
 </html>
