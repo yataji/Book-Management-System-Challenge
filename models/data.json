@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "addc",
+      "username": "yataji",
+      "email": "yassinoubil3@gmail.com",
+      "password": "123456qwerty"
+    },
+    {
+      "id": "381c",
+      "username": "blackdreams",
+      "email": "yassinetaji@num19.com",
+      "password": "12345qwer"
+    },
+    {
+      "username": "jiqarbac",
+      "email": "jihane@gmail.com",
+      "password": "1234jihane"
+    }
+  ],
+  "books": []
+}

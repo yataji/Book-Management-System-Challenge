@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Management System Challenge</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 300px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-align: center;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      button a {
+        text-decoration: none;
+        color: white;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/users/" method="post">
+      <input type="text" name="username" placeholder="username" />
+      <input type="email" name="email" placeholder="your email" />
+      <input type="password" name="password" placeholder="password" />
+      <!-- <input type="password" name="password" placeholder="verify password" /> -->
+      <button type="submit" value="submit">Submit</button>
+    </form>
+  </body>
+</html>
