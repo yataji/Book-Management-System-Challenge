@@ -8,21 +8,21 @@ const api = axios.create({
 });
 
 exports.axGetAllBooks = () => {
-    return api.get('/');
+  return api.get("/");
 };
 
 exports.axGetBookById = (id) => {
-    return api.get(`/${id}`);
+  return api.get(`/${id}`);
 };
 
 exports.axAddBook = (data) => {
-    return api.post('/', data);
+  return api.post("/", data);
 };
 
 exports.axUpdateBook = (id, data) => {
-    return api.put(`/${id}`, data);
+  return api.put(`/${id}`, data);
 };
 
 exports.axDeleteBook = (id) => {
-    return api.delete(`/${id}`);
+  return api.delete(`/${id}`);
 };

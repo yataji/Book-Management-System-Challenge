@@ -8,17 +8,16 @@ const {
   deleteUser,
   connectProfile,
 } = require("../controllers/usersController");
-
-const qwerty = (req, res, next) => {
-  console.log("next");
-  next();
-};
+const { isAuth } = require("../middleware/checkAuth");
+const { renderProfilePage } = require("../controllers/pagesController");
+const { loginXss, registerXss } = require("../middleware/xss");
 
 routes.get("/", getAllUser);
-routes.post("/profile", qwerty, connectProfile);
+routes.post("/login", loginXss ,connectProfile);
+routes.get("/profile", isAuth, renderProfilePage);
 routes.get("/:id", getUserById);
 
-routes.post("/", addUser);
+routes.post("/", registerXss, addUser);
 
 routes.put("/:id", updateUser);
 

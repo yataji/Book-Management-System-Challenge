@@ -5,8 +5,10 @@ const {
   axUpdateUser,
   axDeleteUser,
 } = require("../api/axiosUsers");
-const { hashing, compareHashingPass } = require("../helper/hashing");
+const { compareHashingPass } = require("../helper/hashing");
 const { checkEmail, userGenerator } = require("../helper/connection");
+const { createToken } = require("../helper/tokenfunction");
+const { setCookies } = require("../helper/cookies");
 
 exports.getAllUser = async () => {
   return await axGetAllUsers();
@@ -14,12 +16,15 @@ exports.getAllUser = async () => {
 
 exports.connectProfile = async (req, res) => {
   const { email, password } = req.body;
-  const users = await axGetAllUsers();
+  const users = await this.getAllUser();
   const userFound = checkEmail(email, users.data);
   if (!userFound) return res.send("email not found");
   if (!(await compareHashingPass(password, userFound.password)))
     return res.send("password incorrect");
-  return res.status(200).render("profile", { userFound });
+  const token = createToken(userFound);
+  if (!token) return res.status(404).render("404");
+  res.cookie("userToken", token, setCookies());
+  res.redirect("/users/profile");
 };
 
 exports.getUserById = (req, res) => {

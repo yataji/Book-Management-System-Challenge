@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<htmlSS>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+      .book-list {
+        list-style: none;
+        padding: 0;
+      }
+      .book-list li {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .book-title {
+        font-size: 20px;
+        color: #333;
+      }
+      .book-author {
+        font-size: 16px;
+        color: #666;
+      }
+      .book-year {
+        font-size: 14px;
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Available Books</h1>
+    <ul class="book-list">
+      <% if (data) { %>
+            <% data.forEach(function(book) { %>
+                <li>
+                    <div class="book-title">Tilte : <%= book.title %></div>
+                    <div class="book-author">Genre : <%= book.genre %></div>
+                    <div class="book-year">Content : <%= book.content %></div>
+                    <button>
+                        <a href="/books/edit/<%= book.id %>/<%= book.authorId %>">edit</a>
+                      </button>
+                      <button>
+                        <a href="/books/delete/<%= book.id %>">delete</a>
+                      </button>
+                </li>
+            <% });} %>
+    </ul>
+  </body>
+</html>
